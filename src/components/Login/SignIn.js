@@ -42,13 +42,16 @@ class SignIn extends Component{
 					      underlineStyle={underlineStyle}
 					      underlineFocusStyle={underlineFocusStyle}
 					/>
-					<div>
+					<div className='buttons'>
 						<RaisedButton
-							label="Sign In"
+							label='Sign In'
 							fullWidth={false}
 							backgroundColor={'#00BFA5'}
 							labelStyle={labelStyle}
 						/>
+					</div>
+					<div className='links'>
+						<span>Create account</span> | <span>Forgot password</span>
 					</div>
 				</div>
 			)
