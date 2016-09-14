@@ -1,0 +1,63 @@
+.main-header{
+	position: fixed;
+	padding: 1em 0;
+	background: #00BFA5;
+	z-index: 1;
+	width: 100%;
+	transition: all .4s ease;
+}
+.main-header.low-opacity{
+	background: rgba(0, 0, 0, 0);
+}
+.main-header div{
+	display:inline-block;
+}
+.main-header .logo{
+	margin: 0 1em;
+	font-size: 1.3em;
+	font-weight: 100;
+}
+.main-header .tabs-container{
+	margin: 0 1em;
+	font-size: 1em;
+}
+.main-header .tabs-container .tab{
+	padding: .5em;
+	cursor: pointer;
+	transition:color .4s ease;
+}
+.main-header .tabs-container .tab:hover{
+	color:#616161;
+}
+.main-header.low-opacity .tabs-container .tab{
+	color:#00BFA5;
+}
+.main-header.low-opacity .tabs-container .tab:hover{
+	color:white;
+}
+.main-header .buttons-container{
+	position: relative;
+	margin: 0 1em;
+	float:right;
+}
+.main-header .buttons-container .button{
+	padding: .5em;
+	margin: 0 .5em;
+	font-size: .8em;
+	cursor: pointer;
+	border: 1px solid white;
+	border-radius:2px; 
+	transition:all .4s ease;
+}
+.main-header .buttons-container .button:hover{
+	border: 1px solid #616161;
+	color:#616161;
+}
+.main-header.low-opacity .buttons-container .button{
+	border: 1px solid #00BFA5;
+	color:#00BFA5;
+}
+.main-header.low-opacity .buttons-container .button:hover{
+	border: 1px solid white;
+	color:white;
+}

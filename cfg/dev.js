@@ -35,5 +35,4 @@ config.module.loaders.push({
     [ path.join(__dirname, '/../src') ]
   )
 });
-
 module.exports = config;

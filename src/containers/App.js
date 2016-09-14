@@ -10,12 +10,23 @@ import React, {
 } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+//import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
 import Main from '../components/Main';
+injectTapEventPlugin();
 /* Populated by react-webpack-redux:reducer */
 class App extends Component {
   render() {
     const {actions} = this.props;
-    return <Main actions={actions}/>;
+
+    return(
+        <MuiThemeProvider muiTheme={getMuiTheme()}>
+          <Main actions={actions}/>
+        </MuiThemeProvider>
+      )
   }
 }
 /* Populated by react-webpack-redux:reducer
