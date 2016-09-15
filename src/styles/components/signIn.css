@@ -1,11 +1,7 @@
 .sign-in-ui{
     position: relative;
     float: right;
-    max-width: 18em;
-    margin-right: 1.7em;
-    padding-left: 1em;
-    padding-bottom: 1em;
-    padding-top: 1em;
+    padding: 1em;
     top: 25%;
     border: 1px solid #00BFA5;
     border-radius: 3px;
@@ -21,7 +17,7 @@
 }
 .sign-in-ui .links{
     padding: .5em 0;
-    font-size: .8em;
+    font-size: 1em;
     font-weight: 100;
 }
 .sign-in-ui .links span{

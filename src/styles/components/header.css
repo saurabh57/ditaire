@@ -30,10 +30,10 @@
 	color:#616161;
 }
 .main-header.low-opacity .tabs-container .tab{
-	color:#00BFA5;
+	color:white;
 }
 .main-header.low-opacity .tabs-container .tab:hover{
-	color:white;
+	color:#00BFA5;
 }
 .main-header .buttons-container{
 	position: relative;

@@ -32,6 +32,7 @@ class SignIn extends Component{
 					      hintStyle={hintStyle}
 					      inputStyle={inputStyle}
 					      underlineStyle={underlineStyle}
+					      fullWidth={true}
 					      underlineFocusStyle={underlineFocusStyle}
 					/>
 					<TextField
@@ -40,6 +41,7 @@ class SignIn extends Component{
 					      hintStyle={hintStyle}
 					      inputStyle={inputStyle}
 					      underlineStyle={underlineStyle}
+					      fullWidth={true}
 					      underlineFocusStyle={underlineFocusStyle}
 					/>
 					<div className='buttons'>
