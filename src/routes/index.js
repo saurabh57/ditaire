@@ -1,7 +1,7 @@
 const ROOT = '';
 const DEFAULT = `${ROOT}/`;
-const SIGNIN = `${ROOT}/account/signin`;
-const SIGNUP = `${ROOT}/account/signup`;
+const SIGNIN = `${ROOT}/signin`;
+const SIGNUP = `${ROOT}/signup`;
 
 const PATHS = {
 	'root':ROOT,

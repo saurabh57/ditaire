@@ -41,13 +41,14 @@
 	float:right;
 }
 .main-header .buttons-container .button{
-	padding: .5em;
+	padding: 1em;
 	margin: 0 .5em;
 	font-size: .8em;
 	cursor: pointer;
 	border: 1px solid white;
 	border-radius:2px; 
 	transition:all .4s ease;
+	color:white;
 }
 .main-header .buttons-container .button:hover{
 	border: 1px solid #616161;

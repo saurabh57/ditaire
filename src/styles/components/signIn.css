@@ -1,8 +1,6 @@
 .sign-in-ui{
     position: relative;
-    float: right;
     padding: 1em;
-    top: 25%;
     border: 1px solid white;
     border-radius: 3px;
 }
@@ -18,6 +16,7 @@
 }
 .sign-in-ui .links span{
     cursor: pointer;
+    color: white;
 }
 .sign-in-ui .links span:hover{
     text-decoration: underline;

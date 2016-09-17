@@ -17,20 +17,12 @@
 	height: 60%;
 	top:20%;
 	border-radius: 5px;
-	display: -webkit-flex; 
-    -webkit-align-items: flex-start; 
-    display: flex;
-    align-items: flex-start;
     background: rgba(144, 137, 137, 0.45);
 }
 .main-banner .banner-content .signInModal{
-    -webkit-align-self: center;
-    align-self: center;
     padding: 1em;
 }
 .main-banner .banner-content .introModal{
-    -webkit-align-self: center;
-    align-self: center;
     padding: 1em;
     border-radius: 5px;
 }

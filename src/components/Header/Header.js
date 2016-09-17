@@ -37,7 +37,12 @@ class Header extends Component{
 		this.scrollEvent = this.scrollEvent.bind(this);
 	}
 	componentDidMount(){
-		document.addEventListener('scroll',this.scrollEvent,false)
+		const {headerColor} = this.props;
+		if(headerColor !== 'active'){
+			document.addEventListener('scroll',this.scrollEvent,false)
+		}else{
+			this.setState(Object.assign({},this.state,{'opacity':''}));
+		}
 	}
 	scrollEvent(){
 		if(window.scrollY <= 120){

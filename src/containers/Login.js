@@ -8,7 +8,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import {SignIn , SignUp , Header} from 'components';
 import PATHS from 'routes';
 
-let renderComponent ;
+let isSignup = true,title='';
 class Login extends Component{
 	constructor(props){
 		super(props);
@@ -19,29 +19,31 @@ class Login extends Component{
 	componentWillMount(){
 		const {location} = this.props;
 		if(location.pathname === PATHS.signup){
-
+			isSignup = true;
+			title = 'Sign Up';
 		}else{
-			
+			isSignup = false;
+			title = 'Sign In';
 		}
-	}
-	componentDidMount(){
-
 	}
 	render(){
 		return(
 		        <MuiThemeProvider muiTheme={getMuiTheme()}>
-		          <div className='container-fluid'>
-		          	<Header />
-		          	<div className='container'>
-		          		{
-		          			(()=>{
-		          				if(location.pathname === PATHS.signup){
-		          					return <SignUp />
-		          				}else{
-		          					return <SignIn />
-		          				}
-		          			})()
-		          		}
+		          <div>
+		          	<Header headerColor='active'/>
+		          	<div className='container pageLayout flex'>
+		          		<div className='row text-center'>{title}</div>
+		          		<div className='self-aligned margin-auto'>
+		          			{
+			          			(()=>{
+			          				if(isSignup){
+			          					return <SignUp />
+			          				}else{
+			          					return <SignIn color='grey' fullWidthButtton={true} linkColor='#00BFA5'/>
+			          				}
+			          			})()
+			          		}
+		          		</div>
 		          	</div>
 		          </div>
 		        </MuiThemeProvider>

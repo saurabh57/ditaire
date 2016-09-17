@@ -7,7 +7,6 @@ import { connect } from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import {Default} from 'components';
 import Main from '../components/Main';
 injectTapEventPlugin();
 class App extends Component {

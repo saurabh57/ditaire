@@ -11,11 +11,11 @@ class MainBanner extends Component{
 	render(){
 		return(
 				<div className='main-banner'>
-					<div className='banner-content container'>
-						<div className='introModal col-lg-8 col-md-8 col-sm-12 col-xm-12'>
+					<div className='banner-content container flex'>
+						<div className='introModal self-aligned col-lg-8 col-md-8 col-sm-12 col-xm-12'>
 							<IntroHeading />
 						</div>
-						<div className='signInModal col-lg-4 col-md-4 col-sm-12 col-xm-12'>
+						<div className='signInModal self-aligned col-lg-4 col-md-4 col-sm-12 col-xm-12'>
 							<SignIn />
 						</div>
 					</div>
