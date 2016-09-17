@@ -1,5 +1,7 @@
 import React , {Component} from 'react';
+import {Link} from 'react-router';
 import style from 'styles/components/header.css';
+import PATHS from 'routes';
 const defaultInfo = {
 	'companyName':'DIAMANTAIRE',
 	'tabs':[
@@ -16,11 +18,13 @@ const defaultInfo = {
 	'buttons':[
 				{
 					'name':'Sign Up',
-					'fill':false
+					'fill':false,
+					'pathTo':PATHS.signup
 				},
 				{
 					'name':'Sign In',
-					'fill':true
+					'fill':true,
+					'pathTo':PATHS.signin
 				}
 			  ]
 }
@@ -72,7 +76,7 @@ const ButtonsContainer =(props) =>{
 		<div className='buttons-container'>
 			{
 				buttons.map((button,index)=>{
-					return <div key={`button-${index}`} className='button'>{button.name}</div>
+					return <Link key={`button-${index}`} to={`${button.pathTo}`}><div className='button'>{button.name}</div></Link>
 				})
 			}
 		</div>

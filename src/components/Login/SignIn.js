@@ -7,7 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 class SignIn extends Component{
 	render(){
 		const hintStyle ={
-			'color':'#00BFA5',
+			'color':'white',
 			'fontWeight':'100',
 			'fontSize':'.8em'
 		}
@@ -17,10 +17,10 @@ class SignIn extends Component{
 			'fontSize':'1em'
 		}
 		const underlineFocusStyle ={
-			'borderColor':'white'
+			'borderColor':'#00BFA5'
 		}
 		const underlineStyle ={
-			'borderColor':'#00BFA5'
+			'borderColor':'white'
 		}
 		const labelStyle ={
 			'color':'white'

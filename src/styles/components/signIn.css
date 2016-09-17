@@ -3,17 +3,13 @@
     float: right;
     padding: 1em;
     top: 25%;
-    border: 1px solid #00BFA5;
+    border: 1px solid white;
     border-radius: 3px;
 }
 .sign-in-ui .buttons{
     padding: .5em 0;
     font-size: .8em;
     font-weight: 100;
-}
-.signInButton:hover{
-	background: #00BFA5;
-	color:white;
 }
 .sign-in-ui .links{
     padding: .5em 0;
@@ -26,9 +22,4 @@
 .sign-in-ui .links span:hover{
     text-decoration: underline;
 }
-/*.sign-in-ui .links .sign-up-link{
-    cursor: pointer;
-}
-.sign-in-ui .links .forgot-password-link{
-    cursor: pointer;
-}*/
+
