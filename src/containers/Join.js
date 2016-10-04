@@ -5,22 +5,18 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import {SignIn , SignUp , Header} from 'components';
+import {SignUp , Header} from 'components';
+import PATHS from 'routes';
 
-class Login extends Component{
+class Join extends Component{
 	render(){
 		return(
 		        <MuiThemeProvider muiTheme={getMuiTheme()}>
 		          <div>
 		          	<Header headerColor='active'/>
-		          	<div className='container pageLayout flex'>
-		          		<div className='self-aligned margin-auto'>
-		          			<SignIn color='grey' 
-			          				fullWidthButtton={true} 
-			          				linkColor='#00BFA5'
-			          				showHeader={true}
-			          				defaultBackground={true}
-			          		/>
+		          	<div className='container pageLayout'>
+		          		<div className='row header-padding'>
+							<SignUp />
 		          		</div>
 		          	</div>
 		          </div>
@@ -29,7 +25,7 @@ class Login extends Component{
 	}
 }
 
-Login.PropTypes = {
+Join.PropTypes = {
 
 }
 function mapStateToProps(state){
@@ -42,4 +38,4 @@ function mapDispatchToProps(dispatch){
 		dispatch
 	}
 }
-export default connect(mapStateToProps,mapDispatchToProps)(Login)
+export default connect(mapStateToProps,mapDispatchToProps)(Join)

@@ -1,0 +1,14 @@
+.sign-up-ui{
+	color: grey;
+	background: ghostwhite;
+    padding: 0 1em 1em 1em;
+}
+.title-container{
+    margin-top: 1em;
+    font-size: 1.6em;
+    border-bottom: 1px solid #00BFA5;
+    padding: .5em;
+}
+.action-container{
+	margin-top:1em; 
+}

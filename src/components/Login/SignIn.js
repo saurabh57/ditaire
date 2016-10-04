@@ -8,7 +8,9 @@ import PATHS from 'routes';
 
 class SignIn extends Component{
 	render(){
-		const {color,fullWidthButtton,linkColor} = this.props;
+		const {color,fullWidthButtton,linkColor,defaultBackground,showHeader} = this.props;
+		const defaultbackground = defaultBackground ? 'defaultBackground' : '';
+		const showheader = showHeader ? '' : 'hide';
 		const hintStyle ={
 			'color':color || 'white',
 			'fontWeight':'100',
@@ -35,7 +37,9 @@ class SignIn extends Component{
 			color:linkColor || 'white'
 		}
 		return(
-				<div className='sign-in-ui' style={modalStyle}>
+				<div>
+					<div className={`sign-in-ui ${defaultbackground}`} style={modalStyle}>
+					<div className={`title-container text-center ${showheader}`}>Sign In</div>
 					<TextField
 					      hintText='Username/Email'
 					      hintStyle={hintStyle}
@@ -64,6 +68,7 @@ class SignIn extends Component{
 					<div className='links'>
 						<Link to={PATHS.signup}><span style={linkStyle}>Create an account</span></Link> | <span style={linkStyle}>Forgot password</span>
 					</div>
+				</div>
 				</div>
 			)
 	}

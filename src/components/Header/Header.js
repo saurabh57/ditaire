@@ -44,6 +44,9 @@ class Header extends Component{
 			this.setState(Object.assign({},this.state,{'opacity':''}));
 		}
 	}
+	componentWillUnmount(){
+		document.removeEventListener('scroll',this.scrollEvent,false);
+	}
 	scrollEvent(){
 		if(window.scrollY <= 120){
 			this.setState(Object.assign({},this.state,{'opacity':'low-opacity'}));
@@ -55,7 +58,7 @@ class Header extends Component{
 		return(
 				<div className={`main-header ${this.state.opacity}`}>
 					<div className='navigation'></div>
-					<div className='logo'>{defaultInfo.companyName}</div>
+					<Link to={PATHS.root}><div className='logo'>{defaultInfo.companyName}</div></Link>
 					<Tabs tabs={defaultInfo.tabs}></Tabs>
 					<ButtonsContainer buttons={defaultInfo.buttons}></ButtonsContainer>
 				</div>

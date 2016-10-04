@@ -4,6 +4,13 @@
     border: 1px solid white;
     border-radius: 3px;
 }
+.sign-in-ui.defaultBackground{
+    color: grey;
+    background: ghostwhite;
+    padding: 0 1em 1em 1em;
+    border:none;
+    border-radius: none;
+}
 .sign-in-ui .buttons{
     padding: .5em 0;
     font-size: .8em;
