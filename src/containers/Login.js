@@ -1,11 +1,10 @@
-import React,{Component,PropTypes} from 'react';
+import React,{Component} from 'react';
 import {connect} from 'react-redux';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import {SignIn , SignUp , Header} from 'components';
+import {SignIn , Header} from 'components';
 
 class Login extends Component{
 	render(){
@@ -15,8 +14,8 @@ class Login extends Component{
 		          	<Header headerColor='active'/>
 		          	<div className='container pageLayout flex'>
 		          		<div className='self-aligned margin-auto'>
-		          			<SignIn color='grey' 
-			          				fullWidthButtton={true} 
+		          			<SignIn color='grey'
+			          				fullWidthButtton={true}
 			          				linkColor='#00BFA5'
 			          				showHeader={true}
 			          				defaultBackground={true}
@@ -27,10 +26,6 @@ class Login extends Component{
 		        </MuiThemeProvider>
 			)
 	}
-}
-
-Login.PropTypes = {
-
 }
 function mapStateToProps(state){
 	return {

@@ -11,6 +11,7 @@ const store = configureStore();
 render(
   <Provider store={store}>
     <Router history={browserHistory}>
+    	<IndexRoute component={App} />
     	<Route path={PATHS.default} component={App}></Route>
     	<Route path={PATHS.signin} component={Login} location={location}></Route>
     	<Route path={PATHS.signup} component={Join} location={location}></Route>

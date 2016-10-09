@@ -23,7 +23,7 @@ class MainBanner extends Component{
 			);
 	}
 }
-const IntroHeading = (props)=>{
+const IntroHeading = ()=>{
 	return(
 		<div className='intro-heading'>
 			<h1>{content.heading} <span className='company-name'>{content.company}</span></h1>

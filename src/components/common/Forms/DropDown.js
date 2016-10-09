@@ -10,17 +10,19 @@ class DropDown extends Component{
 		this.setValue = this.setValue.bind(this)
 	}
 	setValue(){
+		const {onChange} = this.props;
 		this.setState({value:this.refs.select.value})
+		onChange && onChange(this.refs.select.value)
 	}
 	render(){
-		const {onChange,name,enable,isOptGroup,data,selected} = this.props;
+		const {name,enable,data,selected} = this.props;
 		return(
-				<div className={`dropDown`}>
-	                <span className="custom-select custom-selectDisabledOption">
-	                	<span className="custom-selectInner">{this.state.value}</span>
+				<div className='dropDown'>
+	                <span className='custom-select custom-selectDisabledOption'>
+	                	<span className='custom-selectInner'>{selected || this.state.value}</span>
 	                </span>
-	                <select onChange={this.setValue} disabled={!enable} value={this.state.value} ref="select">
-	                	<option value={name} data-id={`_`} disabled>{name}</option>
+	                <select onChange={this.setValue} disabled={!enable} value={selected || this.state.value} ref="select">
+	                	<option value={name} data-id='_' disabled>{name}</option>
 	                	{data.map(opt => {
 		                                return <option key={opt.value} value={`${opt.value}`}>{opt.text}</option>;
 		                            })
@@ -30,17 +32,5 @@ class DropDown extends Component{
 		)
 	}
 }
-
-
-const OptionGroup = (props) => {
-	const {options , label} = props;
-    return (
-                <optgroup label={label}>
-                	{options.map(opt => {
-                        return <option key={opt.id} value={`${opt.id}`} data-id={`${opt.id}`}>{opt.longname || opt.name}</option>;
-                    })}
-                </optgroup>
-    );
-};
 
 export default DropDown;

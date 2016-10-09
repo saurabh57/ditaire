@@ -3,7 +3,7 @@ import TextField from 'material-ui/TextField';
 
 class InputText extends Component{
 	render(){
-	const {type,color,labelColor,labelFontWeight, fullWidthButtton,underlineColor,underlineWidth,linkColor,hint,label} = this.props;
+	const {type,color,labelColor,labelFontWeight, fullWidthButtton,underlineColor,underlineWidth,hint,label} = this.props;
 	const hintStyle ={
 		'color':color || 'white',
 		'fontWeight':'100',
@@ -26,12 +26,6 @@ class InputText extends Component{
 		'fontWeight': labelFontWeight || '100',
 		'fontSize':'.8em'
 	}
-	const modalStyle ={
-		'borderColor':color || 'white'
-	}
-	const linkStyle ={
-		color:linkColor || 'white'
-	}
 	return (
 			<TextField
 				type={type}
@@ -41,7 +35,7 @@ class InputText extends Component{
 				hintStyle={hintStyle}
 				inputStyle={inputStyle}
 				underlineStyle={underlineStyle}
-				fullWidth={true}
+				fullWidth={fullWidthButtton || true}
 				underlineFocusStyle={underlineFocusStyle}
 		    />
 		)
