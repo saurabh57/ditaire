@@ -1,40 +1,46 @@
-import React, {Component} from 'react';
-import DropDownMenu from 'material-ui/DropDownMenu';
-import MenuItem from 'material-ui/MenuItem';
+import React , {Component} from 'react';
 import style from 'styles/components/forms.css';
-
-const styles = {
-  customWidth: {
-    width: 300,
-    marginTop: '1em'
-  },
-  inActive:{
-  	color:'#6a6a6a',
-  	fontWeight: 100,
-  	fontSize: '0.8em'
-  }
-};
 class DropDown extends Component{
-	constructor(props) {
-	    super(props);
-	    this.state = {value: 'default'};
-  	}
-  	handleChange = (event, index, value) => this.setState({value});
-	render(){
-		const {dropDownItems,label} = this.props;
-		const labelStyle = this.state.value === 'default' ? styles.inActive : '';
-		return(
-				<DropDownMenu labelStyle={labelStyle} value={this.state.value} onChange={this.handleChange} style={styles.customWidth} autoWidth={false}>
-		          <MenuItem disabled={true} className='dropDownElement' value='default' primaryText={label} />
-		          {
-		          	dropDownItems.map((item)=>{
-		          		return <MenuItem className='dropDownElement' value={item.value} primaryText={item.text} />
+	constructor(props){
+		super(props)
 
-		          	})
-		          }
-		        </DropDownMenu>
-			)
+		this.state={
+			value:this.props.name
+		}
+		this.setValue = this.setValue.bind(this)
+	}
+	setValue(){
+		this.setState({value:this.refs.select.value})
+	}
+	render(){
+		const {onChange,name,enable,isOptGroup,data,selected} = this.props;
+		return(
+				<div className={`dropDown`}>
+	                <span className="custom-select custom-selectDisabledOption">
+	                	<span className="custom-selectInner">{this.state.value}</span>
+	                </span>
+	                <select onChange={this.setValue} disabled={!enable} value={this.state.value} ref="select">
+	                	<option value={name} data-id={`_`} disabled>{name}</option>
+	                	{data.map(opt => {
+		                                return <option key={opt.value} value={`${opt.value}`}>{opt.text}</option>;
+		                            })
+	                	}
+	                </select>
+	            </div>
+		)
 	}
 }
+
+
+const OptionGroup = (props) => {
+	const {options , label} = props;
+    return (
+                <optgroup label={label}>
+                	{options.map(opt => {
+                        return <option key={opt.id} value={`${opt.id}`} data-id={`${opt.id}`}>{opt.longname || opt.name}</option>;
+                    })}
+                </optgroup>
+    );
+};
 
 export default DropDown;

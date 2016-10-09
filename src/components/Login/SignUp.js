@@ -5,11 +5,11 @@ import {InputText,DropDown,StandardButton} from 'components/common/Forms';
 const accountType = [
 	{
 		text:'Individual',
-		value:'individual'
+		value:'Individual'
 	},
 	{
 		text:'Organizational',
-		value:'organizational'
+		value:'Organizational'
 	}
 ]
 const country=[
@@ -67,8 +67,8 @@ const InputItems = (props) =>{
 								/>
 				</div>
 				<div className='col-lg-6 col-md-6 col-sm-6 col-xm-12'>
-					<DropDown   dropDownItems={accountType} label='Account type'/>
-					<DropDown   dropDownItems={country} label='Country'/>
+					<DropDown   data={accountType} name='Account type' enable={true}/>
+					<DropDown   data={country} name='Country' enable={true}/>
 				</div>
 			</div>
 		)
