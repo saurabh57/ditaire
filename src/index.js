@@ -15,9 +15,9 @@ render(
     	<Route path={PATHS.signin} component={Login} location={location} />
     	<Route path={PATHS.signup} component={Join} location={location} />
     	<Route path={PATHS.organization} component={OrganizationWall} location={location} />
-        <Route path={PATHS.organizationProfile} component={OrganizationProfile} location={location} />
+      <Route path={PATHS.organizationProfile} component={OrganizationProfile} location={location} />
     	<Route path={PATHS.individual} component={IndividualWall} location={location} />
-        <Route path={PATHS.individualProfile} component={IndividualProfile} location={location} />
+      <Route path={PATHS.individualProfile} component={IndividualProfile} location={location} />
     </Router>
   </Provider>,
   document.getElementById('app')

@@ -2,17 +2,21 @@ import React , {Component} from 'react';
 import {Link} from 'react-router';
 import style from 'styles/components/header.css';
 import PATHS from 'routes';
+import Icon from 'components/common/Icon';
 const defaultInfo = {
 	'companyName':'DIAMANTAIRE',
 	'tabs':[
 		{
-			'name':'Career'
+			'name':'Career',
+			'icon':'line-chart'
 		},
 		{
-			'name':'Communities'
+			'name':'Communities',
+			'icon':'users'
 		},
 		{
-			'name':'Contact Us'
+			'name':'Contact Us',
+			'icon':'mobile'
 		}
 	],
 	'buttons':[
@@ -26,7 +30,20 @@ const defaultInfo = {
 					'fill':true,
 					'pathTo':PATHS.signin
 				}
-			  ]
+	],
+	'profileActions':[
+				{
+					'name':'Setting',
+					'isDropDown':true,
+					'dropDownContent':[
+										{
+											'name':'content-1',
+											'link':'/path'
+										}
+									],
+					'icon':'abc'
+				}
+	]
 }
 class Header extends Component{
 	constructor(props){
@@ -60,7 +77,15 @@ class Header extends Component{
 					<div className='navigation'></div>
 					<Link to={PATHS.root}><div className='logo'>{defaultInfo.companyName}</div></Link>
 					<Tabs tabs={defaultInfo.tabs}></Tabs>
-					<ButtonsContainer buttons={defaultInfo.buttons}></ButtonsContainer>
+					{
+						(()=>{
+							if(this.props.setting === 'profile'){
+								return <ProfileActions />
+							}else{
+								return <ButtonsContainer buttons={defaultInfo.buttons} />
+							}
+						})(this)
+					}
 				</div>
 			)
 	}
@@ -72,7 +97,7 @@ const Tabs =(props) =>{
 		<div className='tabs-container'>
 			{
 				tabs.map((tab,index)=>{
-					return <div key={`tab-${index}`} className='tab'>{tab.name}</div>
+					return <div key={`tab-${index}`} className='tab'><Icon icon={tab.icon} />{tab.name}</div>
 				})
 			}
 		</div>
@@ -89,5 +114,8 @@ const ButtonsContainer =(props) =>{
 			}
 		</div>
 	)
+}
+const ProfileActions = (props)=>{
+
 }
 export default Header;

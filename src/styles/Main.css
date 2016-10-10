@@ -1,0 +1,10 @@
+/**---------ADDING FONTS---------- **/
+@import url(../fonts/FontAwesome/css/font-awesome.css);
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url(../fonts/Roboto/Roboto-Light.ttf);
+}
+
+body{
+	font-family: 'Roboto-Light'
+}

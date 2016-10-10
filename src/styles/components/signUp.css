@@ -2,10 +2,10 @@
 	color: grey;
 	background: ghostwhite;
     padding: 0 1em 1em 1em;
+    margin-top: 1em !important;
 }
 .title-container{
-    margin-top: 1em;
-    font-size: 1.6em;
+    font-size: 1.3em;
     border-bottom: 1px solid #00BFA5;
     padding: .5em;
 }

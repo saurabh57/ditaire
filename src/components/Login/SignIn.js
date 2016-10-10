@@ -9,7 +9,7 @@ import PATHS from 'routes';
 class SignIn extends Component{
 	render(){
 		const {color,fullWidthButtton,linkColor,defaultBackground,showHeader} = this.props;
-		const defaultbackground = defaultBackground ? 'defaultBackground' : '';
+		const defaultbackground = defaultBackground ? 'defaultBackground component' : '';
 		const showheader = showHeader ? '' : 'hide';
 		const hintStyle ={
 			'color':color || 'white',

@@ -29,7 +29,7 @@ const country=[
 class SignUp extends Component{
 	render(){
 		return(
-				<div className='sign-up-ui col-lg-6 col-md-8 col-sm-12 margin-auto'>
+				<div className='sign-up-ui component col-lg-6 col-md-8 col-sm-12 margin-auto'>
 					<div className='title-container text-center'>Sign Up</div>
 					<div className='input-container'>
 						<InputItems />
