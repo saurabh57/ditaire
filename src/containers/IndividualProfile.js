@@ -1,26 +1,33 @@
-import React,{Component} from 'react';
+import React,{Component,PropTypes} from 'react';
 import {connect} from 'react-redux';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-import {SignUp , Header} from 'components';
+import {Header} from 'components';
 
-class Join extends Component{
+class IndividualProfile extends Component{
+	constructor(props){
+		super(props)
+		this.state={}
+	}
 	render(){
-		return(
-		        <MuiThemeProvider muiTheme={getMuiTheme()}>
+		return (
+				<MuiThemeProvider muiTheme={getMuiTheme()}>
 		          <div>
-		          	<Header headerColor='active'/>
+		          	<Header headerColor='active' setting='profile'/>
 		          	<div className='container pageLayout'>
 		          		<div className='row header-padding'>
-							<SignUp />
+							<div>Individual profile</div>
 		          		</div>
 		          	</div>
 		          </div>
 		        </MuiThemeProvider>
 			)
 	}
+}
+IndividualProfile.propTypes = {
+
 }
 function mapStateToProps(state){
 	return {
@@ -32,4 +39,4 @@ function mapDispatchToProps(dispatch){
 		dispatch
 	}
 }
-export default connect(mapStateToProps,mapDispatchToProps)(Join)
+export default connect(mapStateToProps,mapDispatchToProps)(IndividualProfile)

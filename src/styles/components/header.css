@@ -2,7 +2,7 @@
 	position: fixed;
 	padding: 1em 0;
 	background: #00BFA5;
-	z-index: 1;
+	z-index: 10;
 	width: 100%;
 	transition: all .4s ease;
 }
@@ -29,6 +29,10 @@
 }
 .main-header .tabs-container .tab:hover{
 	color:#616161;
+}
+.main-header .tabs-container .tab.active{
+    background: #04b59d;
+    color: white;
 }
 .main-header.low-opacity .tabs-container .tab{
 	color:white;
