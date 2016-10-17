@@ -18,7 +18,7 @@ body {
   clear: both;
 }
 .header-padding{
-  padding-top: 4.8em;
+  padding-top: 3.4em;
 }
 .index img {
   margin: 40px auto;
@@ -44,11 +44,23 @@ body {
     margin-right: 0.3em;
     vertical-align: text-top;
 }
+.component-container{
+  max-width: 80em;
+  margin:auto;
+}
 .component{
     background: white;
     box-shadow: 1px 1px 2px #cccccc;
     border-top: 1px solid rgba(204, 204, 204, 0.55);
     border-left: 1px solid rgba(204, 204, 204, 0.55);
     border-radius: 4px;
+    margin-top: 1em;
+}
+.mid-container{
+    min-height: 91vh;
+    height: auto;
+}
+.transparentComponent{
+    margin-top: 1em;
 }
 

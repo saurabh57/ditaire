@@ -1,0 +1,28 @@
+.profile-image{
+    display: inline-block;
+    text-align: center;
+}
+.profile-image i{
+	padding: .5em;
+	background: #fff;
+	vertical-align: bottom;
+}
+.profile-name{
+    display: inline-block;
+    color:grey;
+    font-weight: bolder;
+}
+.profileItems-container{
+	margin-top: 1em;
+}
+.profileItems-container .profile-item{
+	color:#00BFA5;
+}
+.profileItems-container .profile-item:hover{
+	color:#00BFA5;
+	font-weight: bolder;
+}
+.profileItems-container .profile-item.activeProfile-item{
+	color:grey;
+	font-weight: bolder;
+}

@@ -33,15 +33,22 @@ const defaultInfo = {
 	],
 	'profileActions':[
 				{
-					'name':'Setting',
+					'title':'Message',
+					'icon':'comments'
+				},
+				{
+					'title':'Notifications',
+					'icon':'bell'
+				},
+				{
+					'name':'username',
 					'isDropDown':true,
 					'dropDownContent':[
 										{
 											'name':'content-1',
 											'link':'/path'
 										}
-									],
-					'icon':'abc'
+									]
 				}
 	]
 }
@@ -80,7 +87,7 @@ class Header extends Component{
 					{
 						(()=>{
 							if(this.props.setting === 'profile'){
-								return <ProfileActions />
+								return <ProfileActions profileActions={defaultInfo.profileActions} />
 							}else{
 								return <ButtonsContainer buttons={defaultInfo.buttons} />
 							}
@@ -116,6 +123,19 @@ const ButtonsContainer =(props) =>{
 	)
 }
 const ProfileActions = (props)=>{
-
+	const profileActions = props.profileActions;
+	return (
+		<div className='profileActions-container'>
+			{
+				profileActions.map((profileAction,index)=>{
+					if(profileAction.icon){
+						return <span className={`profileAction-icon`} key={index}><Icon icon={profileAction.icon} /></span>
+					}else{
+						return <span className={`profileAction-name`} key={index} >{profileAction.name}</span>
+					}
+				})
+			}
+		</div>
+	)
 }
 export default Header;

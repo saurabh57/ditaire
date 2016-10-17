@@ -4,7 +4,7 @@ const SIGNIN = `${ROOT}/signin`;
 const SIGNUP = `${ROOT}/signup`;
 const ORGANIZATION = `${ROOT}/org`;
 const ORGANIZATION_PROFILE = `${ROOT}/org/profile/:organization`;
-const INDIVIDUAL = `${ROOT}/indv`;
+const INDIVIDUAL = `${ROOT}/ind`;
 const INDIVIDUAL_PROFILE = `${ROOT}/ind/profile/:individual`;
 
 const PATHS = {

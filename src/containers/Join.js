@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-import {SignUp , Header} from 'components';
+import {SignUp , Header,Footer} from 'components';
 
 class Join extends Component{
 	render(){

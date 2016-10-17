@@ -1,7 +1,9 @@
 import React , {Component} from 'react';
 import style from 'styles/components/signUp.css';
+import {Link} from 'react-router';
 import {InputText,DropDown,StandardButton} from 'components/common/Forms';
-
+import PATHS from 'routes';
+import {replaceParamInRoot} from 'utils';
 const accountType = [
 	{
 		text:'Individual',
@@ -26,6 +28,8 @@ const country=[
 		value:'China'
 	}
 ]
+let _profileLink = replaceParamInRoot(PATHS.individualProfile,'individual','saurabhpanday');
+let _wallLink = PATHS.individual;
 class SignUp extends Component{
 	render(){
 		return(
@@ -35,7 +39,9 @@ class SignUp extends Component{
 						<InputItems />
 					</div>
 					<div className='action-container'>
-						<StandardButton  label='Create' />
+						<Link to={_wallLink}>
+							<StandardButton  label='Create'></StandardButton>
+						</Link>
 					</div>
 				</div>
 			);

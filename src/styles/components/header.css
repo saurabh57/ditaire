@@ -1,6 +1,6 @@
 .main-header{
 	position: fixed;
-	padding: 1em 0;
+	padding: .5em 0;
 	background: #00BFA5;
 	z-index: 10;
 	width: 100%;
@@ -66,4 +66,31 @@
 .main-header.low-opacity .buttons-container .button:hover{
 	border: 1px solid white;
 	color:white;
+}
+.main-header  .profileActions-container{
+    position: absolute;
+    margin: 0 1em;
+    font-size: 1em;
+    top: 1em;
+    right: 5em;
+}
+.main-header .profileActions-container .profileAction-icon{
+	padding: .5em;
+	cursor: pointer;
+	transition:color .4s ease;
+	font-weight: bold;
+	color: #02a591;
+}
+.main-header .profileActions-container .profileAction-name{
+	padding: .5em;
+	cursor: pointer;
+	transition:color .4s ease;
+	font-weight: bold;
+}
+.main-header .profileActions-container .profileAction-icon:hover{
+	color:#616161;
+}
+.main-header .profileActions-container .profileAction-name:hover{
+    background: #04b59d;
+    color: white;
 }

@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-import {Header} from 'components';
+import {Header,IndividualProfileComponents} from 'components';
 
 class IndividualProfile extends Component{
 	constructor(props){
@@ -17,8 +17,8 @@ class IndividualProfile extends Component{
 		          <div>
 		          	<Header headerColor='active' setting='profile'/>
 		          	<div className='container pageLayout'>
-		          		<div className='row header-padding'>
-							<div>Individual profile</div>
+		          		<div className='row header-padding component-container'>
+							<IndividualProfileComponents />
 		          		</div>
 		          	</div>
 		          </div>

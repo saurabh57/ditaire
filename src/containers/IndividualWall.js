@@ -1,4 +1,10 @@
-import React,{Component,PropType} from 'react';
+import React,{Component,PropTypes} from 'react';
+import {connect} from 'react-redux';
+
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
+import {Header,IndividualWallComponents} from 'components';
 
 class IndividualWall extends Component{
 	constructor(props){
@@ -7,9 +13,30 @@ class IndividualWall extends Component{
 	}
 	render(){
 		return (
-				<div>Individual Wall</div>
+				<MuiThemeProvider muiTheme={getMuiTheme()}>
+		          <div>
+		          	<Header headerColor='active' setting='profile'/>
+		          	<div className='container pageLayout'>
+		          		<div className='row header-padding component-container'>
+							<IndividualWallComponents />
+		          		</div>
+		          	</div>
+		          </div>
+		        </MuiThemeProvider>
 			)
 	}
 }
+IndividualWall.propTypes = {
 
-export default IndividualWall;
+}
+function mapStateToProps(state){
+	return {
+
+	}
+}
+function mapDispatchToProps(dispatch){
+	return {
+		dispatch
+	}
+}
+export default connect(mapStateToProps,mapDispatchToProps)(IndividualWall)

@@ -4,6 +4,8 @@ import Features from './Features/Features';
 import Footer from './Footer/Footer';
 import SignIn from './Login/SignIn';
 import SignUp from './Login/SignUp';
+import IndividualProfileComponents from './Individual/IndividualProfileComponents';
+import IndividualWallComponents from './Individual/IndividualWallComponents';
 
 module.exports = {
 	Header,
@@ -11,5 +13,7 @@ module.exports = {
 	Features,
 	Footer,
 	SignIn,
-	SignUp
+	SignUp,
+	IndividualProfileComponents,
+	IndividualWallComponents
 }
