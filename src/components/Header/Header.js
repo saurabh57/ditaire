@@ -41,7 +41,7 @@ const defaultInfo = {
 					'icon':'bell'
 				},
 				{
-					'name':'username',
+					'name':'Saurabh',
 					'isDropDown':true,
 					'dropDownContent':[
 										{

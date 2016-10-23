@@ -6,6 +6,7 @@ import SignIn from './Login/SignIn';
 import SignUp from './Login/SignUp';
 import IndividualProfileComponents from './Individual/IndividualProfileComponents';
 import IndividualWallComponents from './Individual/IndividualWallComponents';
+import AddPost from './Post/AddPost';
 
 module.exports = {
 	Header,
@@ -15,5 +16,6 @@ module.exports = {
 	SignIn,
 	SignUp,
 	IndividualProfileComponents,
-	IndividualWallComponents
+	IndividualWallComponents,
+	AddPost
 }

@@ -4,11 +4,12 @@ import {replaceParamInRoot} from 'utils';
 import Icon from 'components/common/Icon';
 import styles from 'styles/components/individualWall.css'
 import PATHS from 'routes';
+import AddPost from 'components/Post/AddPost';
 
 let _profileLink = replaceParamInRoot(PATHS.individualProfile,'individual','saurabhpanday');
 let _profileItems = [
 	{
-		'name':'New Feeds',
+		'name':'News Feed',
 		'id':'newFeed',
 		'link':PATHS.individual
 	},
@@ -43,7 +44,7 @@ class IndividualWallComponents extends Component{
 						<ProfileName name={`Saurabh Panday`} link={_profileLink}/>
 						<ProfileItems profileItems={_profileItems} activeLink={this.state.activeLink}/>
 					</div>
-					<div className='component mid-container col-lg-8 col-md-8'></div>
+					<div className='component mid-container col-lg-6 col-md-6'><AddPost /></div>
 					<div className='transparentComponent col-lg-2 col-md-2'></div>
 				</div>
 			)

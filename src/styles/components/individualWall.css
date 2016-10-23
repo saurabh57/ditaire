@@ -17,12 +17,19 @@
 }
 .profileItems-container .profile-item{
 	color:#00BFA5;
+	display: inline-block;
+	width: 100%;
+	padding: .2em .4em;
+	transition: all .2s ease;
 }
 .profileItems-container .profile-item:hover{
-	color:#00BFA5;
 	font-weight: bolder;
+	text-decoration:none;
+	background:white;
+    color: grey;
 }
 .profileItems-container .profile-item.activeProfile-item{
 	color:grey;
 	font-weight: bolder;
+	text-decoration:none;
 }
