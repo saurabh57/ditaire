@@ -7,8 +7,10 @@
  *          you edit them, they are not updated again.
  */
 import { combineReducers } from 'redux';
-import headerReducer from './headerReducer'
+import header from './headerReducer';
+import feeds from './feedsReducer';
 const reducers = {
-	headerReducer
+	header,
+	feeds
 };
 module.exports = combineReducers(reducers);

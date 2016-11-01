@@ -3,7 +3,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 class StandardButton extends Component{
 	render(){
-		const {fullWidthButtton,label,textTransform,className,buttonStyle,disabled} = this.props;
+		const {fullWidthButtton,label,textTransform,className,buttonStyle,disabled,callback} = this.props;
 		const labelStyle ={
 			'color':'white',
 			'textTransform':textTransform || 'none'
@@ -33,6 +33,7 @@ class StandardButton extends Component{
 							fullWidth={fullWidthButtton || false}
 							backgroundColor={'#00BFA5'}
 							labelStyle={labelStyle}
+							onClick={callback}
 						/>
 			)
 	}

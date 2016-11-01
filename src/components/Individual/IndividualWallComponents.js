@@ -38,13 +38,17 @@ class IndividualWallComponents extends Component{
 		}
 	}
 	render(){
+		const {feeds,addPostInFeeds} = this.props;
 		return (
 				<div className='row'>
 					<div className='transparentComponent col-lg-2 col-md-2'>
 						<ProfileName name={`Saurabh Panday`} link={_profileLink}/>
 						<ProfileItems profileItems={_profileItems} activeLink={this.state.activeLink}/>
 					</div>
-					<div className='component mid-container col-lg-6 col-md-6'><AddPost /></div>
+					<div className='component mid-container col-lg-6 col-md-6'>
+						<AddPost addPostInFeeds={addPostInFeeds}/>
+						<FeedsContainer feeds={feeds}/>
+					</div>
 					<div className='transparentComponent col-lg-2 col-md-2'></div>
 				</div>
 			)
@@ -69,6 +73,19 @@ const ProfileItems = (props)=>{
 				items.map((item,index)=>{
 					let active = item.link === activeLink ? 'activeProfile-item':'';
 					return <Link to={item.link} key={index} className={`profile-item ${active}`}><div id={item.id}>{item.name}</div></Link>
+				})
+			}
+		</div>
+	)
+}
+const FeedsContainer = (props) => {
+	let feeds = props.feeds;
+
+	return (
+		<div className='feedsitem-container'>
+			{
+				feeds.map((item,index) => {
+					return <p key={index}>{item}</p>;
 				})
 			}
 		</div>
